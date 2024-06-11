@@ -13,7 +13,7 @@ export default async function ContentBody({page}:{
    
     function formatDate(date: DateField) {
         if (isFilled.date(date)) {
-            const dateOptions: Intl.DateTimeFormat = {
+            const dateOptions: Intl.DateTimeFormatOptions = {
                 weekday: "long",
                 year: "numeric",
                 month: "long",
