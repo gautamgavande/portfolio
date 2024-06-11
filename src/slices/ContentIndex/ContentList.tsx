@@ -122,7 +122,8 @@ function ContentList({ items, contentType, fallbackItemImage, viewMoreText = "Re
 
               <li key={index} className='list-item opacity-0'
                 onMouseEnter={() => onMouseEnter(index)} 
-                ref={(el)=> (itemsRef.current[index]=el)}
+                // ref={(el)=> (itemsRef.current[index]=el)}
+                ref={(el) => { itemsRef.current[index] = el; }}
                 >
                 <Link href={urlPrefix + "/" + item.uid} className='flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row' area-label={item.data.title}>
                   <div className='flex flex-col'>
